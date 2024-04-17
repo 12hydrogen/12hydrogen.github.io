@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>12Hydrogen - Welcome</title>
+
+        <style>
+            :root {
+                --lightColor: '#ecfffb';
+                --subLightColor: '#b4f1f1';
+                --subDarkColor: '#2d767f';
+                --darkColor: '#1e6262';
+            }
+        </style>
+
+        <link rel="stylesheet" type="text/css" href="/css/frame.css" />
+        <link rel="stylesheet" type="text/css" href="/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="/css/welcome.css" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+
+        <script src="/js/main.js"></script>
+        <script src="/js/ajax.js"></script>
+        <script src="/js/marked.min.js"></script>
+        <script src="/js/purify.min.js"></script>
+
+    </head>
+    <body onload="initialize();resizeBody();resizeMain();unsetTransparent();" onbeforeunload="setTransparent()" onresize="resizeBody();">
+        <header class="fixed top shrink round-corner" onresize="resizeMain();">
+            <div class="columns">
+                <nav class="columns column button floating title text-center">Home</nav>
+                <nav class="columns column button floating title text-center">Pages</nav>
+                <nav class="columns column button floating title text-center">About</nav>
+            </div>
+        </header>
+
+        <div id="main-blur" class="fixed shrink round-corner"></div>
+
+        <main class="fixed flex-left flex-top shrink padding-shrink round-corner scroll-bar">
+            <h1 class="full-width">12Hydrogen Blog - A Flask Based Blog</h1>
+            <div class="seperator dark-color"></div>
+            <div id="intro"></div>
+
+            <script src="/js/welcome.js"></script>
+        </main>
+
+        <footer class="fixed bottom shrink padding-shrink round-corner" onresize="resizeMain();">
+            <p>Copyright 2024 12hydrogen, Under GPLv3 License</p>
+        </footer>
+    </body>
+</html>

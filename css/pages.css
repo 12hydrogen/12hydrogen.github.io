@@ -1,0 +1,79 @@
+aside {
+    background-color: var(--subDarkColor);
+    color: var(--lightColor);
+
+    position: sticky;
+    float: left;
+
+    top: 1rem;
+    left: 1rem;
+
+    margin: 0 1rem 1rem 0;
+
+    padding: 1rem;
+}
+
+div#content {
+    float: left;
+
+    margin: 1rem 1rem 1rem 2rem;
+}
+
+@media only screen and (max-width: 800px) {
+    aside {
+        /* background-image: url("../icons/Arrows/arrow-right-double-line.svg"); */
+        color: transparent;
+
+        width: 3rem;
+        height: 3rem;
+
+        left: 0;
+
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+
+        z-index: 3;
+    }
+
+    aside * {
+        display: none;
+    }
+
+    aside:hover {
+        mask-image: none;
+        color: var(--lightColor);
+
+        width: auto;
+        height: auto;
+
+        top: 1rem;
+        left: 1rem;
+
+        border-radius: 1rem;
+    }
+
+    aside:hover * {
+        display: block;
+    }
+
+    div#content {
+        position: absolute;
+        float: none;
+
+        margin-left: 4rem;
+    }
+}
+
+aside>div {
+    margin: 0 1rem 1rem;
+}
+
+aside>div:first-child {
+    /* position: absolute;
+
+    left: 0;
+    right: 0; */
+
+    text-align: center;
+    text-wrap: nowrap;
+}

@@ -1,0 +1,85 @@
+@font-face {
+    font-family: VF;
+    src: url('/static/font/Recursive_VF.woff2');
+}
+
+body {
+    background-color: var(--subLightColor);
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    box-shadow: 0 0 30rem 5rem var(--lightColor) inset;
+
+    scroll-behavior: smooth;
+
+    font-family: 'VF';
+
+    opacity: 0.0;
+
+    transition: opacity 400ms;
+}
+
+header, footer {
+    background-color: var(--subDarkColor);
+    color: var(--lightColor);
+    z-index: 1;
+}
+
+@media only screen and (min-width: 800px) {
+    header, footer, main {
+        box-shadow: 0px 2px 4px 0px #0E0E0E;
+    }
+}
+
+/* @media only screen and (max-width: 400px) {
+    header>.columns{
+        display: none;
+    }
+    header:hover>.columns {
+        display: flex;
+        flex-direction: column;
+    }
+} */
+
+main {
+    background-color: var(--lightColor);
+    color: var(--darkColor);
+
+    text-align: left;
+
+    z-index: 2;
+}
+
+@media only screen and (min-width: 800px) {
+    main {
+        padding: 1rem 2rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    main {
+        padding: 0 !important;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    #main-blur {
+        background-color: transparent;
+        color: transparent;
+
+        pointer-events: none;
+
+        box-shadow: 0 0 1rem 1rem var(--lightColor) inset;
+
+        z-index: 3;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #main-blur {
+        display: none;
+    }
+}

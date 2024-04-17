@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    transition: all 400ms;
+}
+
+:root {
+    --large: 800px;
+    --small: 400px;
+}
+
+/* Grid system */
+.columns {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.columns>.column {
+    flex-grow: 1;
+}
+
+/* Size adjust */
+
+@media only screen and (min-width: 800px) {
+    .shrink {
+        left: 10%;
+        right: 10%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .shrink {
+        left: 0;
+        right: 0;
+    }
+}
+
+.padding-shrink {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.full-width {
+    width: 100%;
+}
+
+/* Positioning */
+.fixed {
+    position: fixed;
+}
+
+@media only screen and (min-width: 800px) {
+    .top {
+        top: 1rem;
+    }
+
+    .bottom {
+        bottom: 1rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .top {
+        top: 0;
+    }
+
+    .bottom {
+        bottom: 0;
+    }
+}
+
+/* Widget style */
+/* Seperator */
+.seperator {
+    height: 1px;
+
+    margin: 3px 0.5rem;
+    padding: 0;
+}
+
+/* Button */
+.button {
+    background-color: var(--subDarkColor);
+    border-radius: 1rem;
+    min-height: 3rem;
+}
+
+/* Border */
+@media only screen and (min-width: 800px) {
+    .round-corner {
+        border-radius: 1rem;
+        min-height: 3rem;
+        min-width: 3rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .round-corner {
+        min-height: 3rem;
+        min-width: 3rem;
+    }
+}
+
+/* Text */
+.title {
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Color */
+.light-color {
+    background-color: var(--lightColor);
+}
+.sub-light-color {
+    background-color: var(--subLightColor);
+}
+.sub-dark-color {
+    background-color: var(--subDarkColor);
+}
+.dark-color {
+    background-color: var(--darkColor);
+}
+
+/* Transition */
+@media only screen and (min-width: 800px) {
+    .floating:hover {
+        box-shadow: 0px 2px 4px 0px #0E0E0E;
+        transform: translate(-3px, -3px);
+    }
+}
+
+/* Scrollbar */
+.scroll-bar {
+    overflow: auto;
+}
+.scroll-bar::-webkit-scrollbar {
+    display: none;
+}
+/* .scroll-bar::-webkit-scrollbar-thumb {
+    background-color: var(--subDarkColor);
+    border-radius: 3px;
+
+    transform: translateX(-1rem);
+}
+.scroll-bar::-webkit-scrollbar-track {
+    visibility: hidden;
+} */
